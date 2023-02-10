@@ -9,7 +9,8 @@ app.use(cors());
 const Productrouter = require("./api/v1/routes/product");
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
-const Conn_str = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.lssdz12.mongodb.net/ecomdb`;
+const Conn_str = `mongodb+srv://shawnDB:bufu4ever@cluster0.lssdz12.mongodb.net/ecomdb`;
 mongoose.connect(Conn_str);
 app.use("/product", Productrouter);
 module.exports=app;
+
